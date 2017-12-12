@@ -1,0 +1,279 @@
+
+/***********************************************************
+************************************************************
+Author: Your Name
+Author website: add your url
+License or copyright: Add copyright info if you want to
+Version: you may want to say which version of template is
+this or not
+************************************************************
+***********************************************************/
+
+/***********************************
+COLORS
+Palette
+#000000  - black
+#ffffff  - white
+rgb(244, 212, 66) - yellow
+rgb(78,108,132)   - oil blue
+#ff69b4           - hot pink
+
+Colors applied
+#ffffff            - white - Background - Header text
+rgb(78,108,132)    - oil blue - Header text background
+#000000            - black - Text p, blockquote, figcaption, subtitles
+rgb(244, 212, 66)  - yellow - subheadings background color - blockquote border/s
+#ff69b4            - hot pink - Links on Hover
+***********************************/
+
+/***********************************
+LINKS
+a (standard):   #000000 - black
+a (hover):      #ff69b4 - hot pink
+a (visited):    #800080 - purple
+***********************************/
+
+/******************************************
+FONTS
+Sans-serif / serif combination
+font-family: 'Poppins', sans-serif; 400, 700
+font-family: 'Zilla Slab Highlight', cursive; 700
+
+*Fonts in Use:
+*H1-H5-Blockquote Zilla Slab Highlight
+*P, links, captions in Poppins
+
+Pairings, weights and sizes
+- Header h1 (title): Zilla Slab Highlight, cursive; font-size: 64px; font-weight: 700; line-height: 1.3;
+- Header h2 (summary): Zilla Slab Highlight, cursive; font-size: 24px; font-weight: 700; line-height: 1.3;
+- Header h3 (byline): Zilla Slab Highlight, cursive; font-size: 18px; font-weight: 700;
+- Body text: Poppins, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5;
+- Blockquotes: Zilla Slab Highlight, cursive; font-size: 24px; font-weight: inherit; line-height: inherit;
+- Figcaptions: Poppins, sans-serif; font-size: 14px; font-weight: inherit; line-height: 1.1;
+********************************************/
+
+/******************************************************
+TABLE OF CONTENTS
+1. Global styles (things that apply to all elements of
+site: general display, general margin, general font)
+2. Header and main body content (headings, images and figures, blockquotes,
+twitter embed code)
+3. Media Queries MAYBE
+******************************************************/
+
+
+/******************************************************
+1. Global styles (things that apply to all elements of
+******************************************************/
+
+/*Make everything inside the <html> act as a block.
+box-sizing: used to tell the browser what the sizing properties (width and height) should include.
+border-box: The width and height properties (and min/max properties) includes content, padding and border, but not the margin */
+html {
+  box-sizing: border-box;
+
+}
+/* The asterisk * used below means wildcard or affect everything.
+box-sizing: inherit, means inherit the property border-box from its parent element html.
+Check what the pseudo elements :before and :after are for https://www.w3schools.com/CSS/css_pseudo_elements.asp */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+
+  background: url("http://ruralmadison.org/wp-content/uploads/2015/06/Urban-Rural-Featured-Image11.png");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  padding-top: 40px;
+}
+
+/*rules for all the body text
+you can give specific text elements their own rules by adding a selector
+{ property: value;} When you do, you override this global rule*/
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px; /* 16px is the standard font size */
+  color: black;
+  background-color: #E6E2B7;
+    line-height: 1.7; /* 1.5 times the size of the font */
+
+}
+
+/******************************************************
+2. Header and main body content
+******************************************************/
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*Header*/
+header {text-align: center;}
+
+header h1 {font-size: 50px;
+          position: absolute;
+          top: 500px;
+          left: 30px;
+          right: 760px
+          color: black
+
+ }
+
+header h2 {font-size: 24px;}
+
+header h3 {
+  font-size: 18px;
+  text-align: center;}
+
+header h3 a {color: #000000;}
+
+header h3 a:hover {color: #2e2bc6}
+
+
+
+
+
+
+
+
+/*Body parts*/
+
+article {
+  max-width: 700px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  text-align: justify;
+}
+
+h3 /*subheadlines*/ {
+  text-align: center;
+  font-size: 28px;
+  color: #000000;
+}
+
+
+
+
+
+figure {
+  display: block;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  }
+
+  .main-header {
+  text-align: center;
+}
+
+
+.container {
+    width: 660px;
+    height: auto;
+}
+
+/* resize images */
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+
+    font-size: 14px;
+    padding: 8px 8px 20px 2px; /*Remember the rule of TRouBLE Top Right Bottom Left. 2px 2px 2px 2px*/
+    text-align: center;
+}​
+
+
+
+/*Hiding while I try new thing with the blockquite
+blockquote {
+  font-size: 25px;
+  font-style: italic;
+
+}
+*/
+
+
+
+/*div container for the 3 images and captions*/
+.img-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* make the figure inside the div container img-wrapper a width of 200px*/
+.img-wrapper figure {
+  width: 200px;
+  text-align: left;
+  line-height: 1;
+  padding: 1px /*top*/ 0px /*right*/ 1px /*bottom*/ 0px /*left*/
+}
+
+/*Links in body*/
+a:hover {color: hotpink;}
+
+.pquote {
+    float: right;
+    width: 300px;
+    background: url(images/openquote.gif) top left no-repeat;
+    color: #030;
+    font-size: 16px;
+    line-height: 1.7;
+    font-style: italic;
+    padding: 55px;
+    text-align: left
+}
+
+blockquote {
+    margin: 0;
+}
+
+.pquote p:first-letter {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*Twitter embed code*/
+
+
+/*Higing while I try new blockquote  blockquote.twitter-tweet {
+    display: inline-block;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    padding: 0 16px 16px 16px;
+    max-width: 468px;
+  }
+  */
+
+
+
+
+
+footer.bio-box {
+    width: 700px;
+    max-width: 700px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-top: 1.5px solid grey;
+    padding-top: 20px;
+    margin: 5px auto 20px;
+}
